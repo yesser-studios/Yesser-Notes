@@ -1,0 +1,26 @@
+﻿<ContentDialog
+    x:Class="yNotes.SettingsDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:yNotes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Settings"
+    x:Uid="SettingsDialog"
+    PrimaryButtonText="OK"
+    PrimaryButtonStyle="{StaticResource AccentButtonStyle}"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+
+    <ContentDialog.Resources>
+        <Style x:Name="SecondaryHeader" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </ContentDialog.Resources>
+
+    <StackPanel Orientation="Vertical">
+        <TextBlock Style="{StaticResource SecondaryHeader}" Text="Text Editing" x:Uid="TextEditing" />
+        <ToggleSwitch OnContent="Automatically Clear Text Box" OffContent="Automatically Clear Text Box" x:Uid="AutoClearTB" x:Name="SaveDStateSaving" Toggled="SaveDStateSaving_Toggled" />
+    </StackPanel>
+</ContentDialog>

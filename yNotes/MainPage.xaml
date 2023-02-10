@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="yNotes.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:yNotes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls">
+
+    <Page.TopAppBar>
+        <CommandBar DefaultLabelPosition="Right" x:Name="mainCB">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Uid="Settings" x:Name="SettingsABB" Icon="Setting" Label="Settings" Click="SettingsABB_Click">
+                    <AppBarButton.KeyboardAccelerators>
+                        <KeyboardAccelerator Modifiers="Control,Shift" Key="S" />
+                    </AppBarButton.KeyboardAccelerators>
+                </AppBarButton>
+
+                <AppBarButton x:Uid="Export" x:Name="ExportABB" Icon="Share" Label="Export" Click="ExportABB_Click">
+                    <AppBarButton.KeyboardAccelerators>
+                        <KeyboardAccelerator Modifiers="Control,Shift" Key="E" />
+                    </AppBarButton.KeyboardAccelerators>
+                </AppBarButton>
+
+                <AppBarButton x:Uid="Import" x:Name="ImportABB" Icon="Import" Label="Import" Click="ImportABB_Click">
+                    <AppBarButton.KeyboardAccelerators>
+                        <KeyboardAccelerator Modifiers="Control,Shift" Key="I" />
+                    </AppBarButton.KeyboardAccelerators>
+                </AppBarButton>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="Clear" x:Name="ClearAllABB" Icon="Delete" Label="Clear All">
+                    <Button.Flyout>
+                        <Flyout x:Name="ClearFO">
+                            <StackPanel>
+                                <TextBlock x:Uid="ClearFlyoutText" Style="{ThemeResource BaseTextBlockStyle}" Text="All notes will be removed. Continue?" TextWrapping="WrapWholeWords" Margin="0,0,0,12" />
+                                <Button x:Uid="ClearOK" Click="ClearAllABB_Click" Content="Yes, clear all" />
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </AppBarButton>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
+
+    <Grid>
+        <ScrollViewer x:Name="mainGrid">
+            <StackPanel Orientation="Vertical" x:Name="mainStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ListBox Height="300" Width="400" Margin="5" SelectionMode="Extended" x:Name="notesLB" />
+                <TextBox x:Uid="TextBox" x:Name="noteTB" Width="400" Margin="5" PlaceholderText="Enter Note" HorizontalAlignment="Center" TextWrapping="Wrap" IsSpellCheckEnabled="True" />
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="mainButtonSP">
+                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Save" x:Name="saveB" Style="{StaticResource AccentButtonStyle}" Click="saveB_Click" ToolTipService.ToolTip="Save">
+                        <Button.KeyboardAccelerators>
+                            <KeyboardAccelerator Key="Enter" />
+                        </Button.KeyboardAccelerators>
+
+                        <SymbolIcon Symbol="Save" />
+                    </Button>
+
+                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Delete" x:Name="deleteB" Style="{StaticResource DefaultButtonStyle}" Click="deleteB_Click" ToolTipService.ToolTip="Delete">
+                        <Button.KeyboardAccelerators>
+                            <KeyboardAccelerator Key="Delete" />
+                        </Button.KeyboardAccelerators>
+
+                        <SymbolIcon Symbol="Delete" />
+                    </Button>
+
+                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Edit" x:Name="editB" Style="{StaticResource DefaultButtonStyle}" Click="editB_Click" ToolTipService.ToolTip="Edit">
+                        <Button.KeyboardAccelerators>
+                            <KeyboardAccelerator Modifiers="Control" Key="E" />
+                        </Button.KeyboardAccelerators>
+
+                        <SymbolIcon Symbol="Edit" />
+                    </Button>
+
+                    <muxc:TeachingTip x:Name="editNoNoteSelectedTT"
+                    x:Uid="NoNote"
+                    Target="{x:Bind editB}"
+                    Title="No Notes Selected!"
+                    Subtitle="You need to select a note first before editing it!">
+                        <muxc:TeachingTip.IconSource>
+                            <muxc:SymbolIconSource Symbol="Cancel" />
+                        </muxc:TeachingTip.IconSource>
+                    </muxc:TeachingTip>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="editButtonSP" >
+                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Save" x:Name="editSaveB" Style="{StaticResource AccentButtonStyle}" Click="editSaveB_Click" ToolTipService.ToolTip="Save">
+                        <Button.KeyboardAccelerators>
+                            <KeyboardAccelerator Key="Enter" />
+                        </Button.KeyboardAccelerators>
+
+                        <SymbolIcon Symbol="Save" />
+                    </Button>
+                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Cancel" x:Name="editCancelB" Style="{StaticResource DefaultButtonStyle}" Click="editCancelB_Click" ToolTipService.ToolTip="Cancel">
+                        <Button.KeyboardAccelerators>
+                            <KeyboardAccelerator Key="Escape" />
+                        </Button.KeyboardAccelerators>
+
+                        <SymbolIcon Symbol="Cancel" />
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
