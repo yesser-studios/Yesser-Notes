@@ -9,7 +9,7 @@
   <Identity
     Name="25078YesserStudios.yNotes"
     Publisher="CN=Yesser Studios UWP"
-    Version="1.0.1.0" />
+    Version="1.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="d1df0e22-ad0a-42dd-9fc8-f36261046618" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
