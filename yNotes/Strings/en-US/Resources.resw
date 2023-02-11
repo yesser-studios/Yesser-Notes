@@ -207,10 +207,11 @@ Do you want to continue?</value>
     <value>Got it!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Version 1.0.1:
+    <value>Version 1.1:
 + Added import (Not supported on Xbox)
 + Added Xbox support (Import and export not supported on it)
-+ Added a "What's new" popup</value>
++ Added a "What's new" popup
++ Added support for systems using the x86 architecture</value>
   </data>
   <data name="WhatsNewTT.Title" xml:space="preserve">
     <value>What's new</value>

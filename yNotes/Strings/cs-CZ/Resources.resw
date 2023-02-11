@@ -207,10 +207,11 @@ Chcete pokračovat?</value>
     <value>Mám to!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Verze 1.0.1:
+    <value>Verze 1.1:
 + Přidán import (Není dostupné na Xboxu)
-+ Přidána podpora pro Xbox (Import a export nejsou dostupné)
-+ Přidáno vyskakovací okno "Co je nového" </value>
++ Přidána podpora pro Xbox (Import a export na něm nejsou dostupné)
++ Přidáno vyskakovací okno "Co je nového" 
++ Přidána podpora pro systémy používající archtekturu x86</value>
   </data>
   <data name="WhatsNewTT.Title" xml:space="preserve">
     <value>Co je nového</value>
