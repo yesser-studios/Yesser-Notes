@@ -43,6 +43,7 @@ namespace yNotes
             picker.FileTypeFilter.Add(".txt");
 
             StorageFile file = await picker.PickSingleFileAsync();
+            if (file == null) return;
             lines = await FileIO.ReadLinesAsync(file);
 
             UpdateUI(file);
