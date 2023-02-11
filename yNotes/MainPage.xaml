@@ -46,6 +46,8 @@
     </Page.TopAppBar>
 
     <Grid>
+        <muxc:TeachingTip x:Uid="WhatsNewTT" x:Name="WhatsNewTT" Title="PLACEHOLDER Whatsnew" Subtitle="PLACEHOLDER Version 0.0.0: CHANGENOTES" CloseButtonContent="Got it!" />
+
         <ScrollViewer x:Name="mainGrid">
             <StackPanel Orientation="Vertical" x:Name="mainStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <ListBox Height="300" Width="400" Margin="5" SelectionMode="Extended" x:Name="notesLB" />

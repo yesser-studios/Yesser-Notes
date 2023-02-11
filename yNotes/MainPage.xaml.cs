@@ -19,6 +19,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.System.Profile;
+using Windows.ApplicationModel.VoiceCommands;
 
 // Dokumentaci k šabloně položky Prázdná stránka najdete na adrese https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x405
 
@@ -29,6 +30,9 @@ namespace yNotes
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public readonly int updateID = 2;
+        int prevUpdateID;
+
         readonly ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
         public bool[] options =
@@ -103,12 +107,15 @@ namespace yNotes
                 localSettings.Values["notes"] = 1;
 
             localSettings.Values["options"] = options;
+
+            localSettings.Values[nameof(updateID)] = updateID;
         }
 
         private void LoadStuff()
         {
             LoadOptions();
             LoadNotes();
+            LoadVersion();
         }
 
         private void LoadOptions()
@@ -140,6 +147,23 @@ namespace yNotes
 
                 notesLB.Items.Add(item);
             }
+        }
+
+        private void LoadVersion()
+        {
+            object raw = localSettings.Values[nameof(updateID)];
+
+            int? prevVersion = raw as int?;
+            if (prevVersion == null || prevVersion < updateID) ShowWhatsNewPopup();
+
+            prevUpdateID = (int)prevVersion;
+
+            SaveStuff();
+        }
+
+        private void ShowWhatsNewPopup()
+        {
+            WhatsNewTT.IsOpen = true;
         }
 
         private void SettingsABB_Click(object sender, RoutedEventArgs e)

@@ -203,4 +203,16 @@ Chcete pokračovat?</value>
   <data name="TextEditing.Text" xml:space="preserve">
     <value>Ukládání Poznámek</value>
   </data>
+  <data name="WhatsNewTT.CloseButtonContent" xml:space="preserve">
+    <value>Mám to!</value>
+  </data>
+  <data name="WhatsNewTT.Subtitle" xml:space="preserve">
+    <value>Verze 1.0.1:
++ Přidán import (Není dostupné na Xboxu)
++ Přidána podpora pro Xbox (Import a export nejsou dostupné)
++ Přidáno vyskakovací okno "Co je nového" </value>
+  </data>
+  <data name="WhatsNewTT.Title" xml:space="preserve">
+    <value>Co je nového</value>
+  </data>
 </root>

@@ -203,4 +203,16 @@ Do you want to continue?</value>
   <data name="TextEditing.Text" xml:space="preserve">
     <value>Note Saving</value>
   </data>
+  <data name="WhatsNewTT.CloseButtonContent" xml:space="preserve">
+    <value>Got it!</value>
+  </data>
+  <data name="WhatsNewTT.Subtitle" xml:space="preserve">
+    <value>Version 1.0.1:
++ Added import (Not supported on Xbox)
++ Added Xbox support (Import and export not supported on it)
++ Added a "What's new" popup</value>
+  </data>
+  <data name="WhatsNewTT.Title" xml:space="preserve">
+    <value>What's new</value>
+  </data>
 </root>
