@@ -53,8 +53,6 @@ namespace yNotes
             LoadStuff();
 
             editButtonSP.Visibility = Visibility.Collapsed;
-
-            ShowWhatsNewPopup();
         }
 
         private void saveB_Click(object sender, RoutedEventArgs e)
