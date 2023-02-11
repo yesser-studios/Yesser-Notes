@@ -156,7 +156,7 @@ namespace yNotes
             int? prevVersion = raw as int?;
             if (prevVersion == null || prevVersion < updateID) ShowWhatsNewPopup();
 
-            prevUpdateID = (int)prevVersion;
+            prevUpdateID = prevVersion != null ? (int)prevVersion : updateID;
 
             SaveStuff();
         }
