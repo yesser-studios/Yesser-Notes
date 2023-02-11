@@ -16,7 +16,7 @@
   <Properties>
     <DisplayName>yNotes</DisplayName>
     <PublisherDisplayName>Yesser Studios</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -33,13 +33,13 @@
       EntryPoint="yNotes.App">
       <uap:VisualElements
         DisplayName="yNotes"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
+        Square150x150Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Square150x150Logo.png"
+        Square44x44Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Square44x44Logo.png"
         Description="yNotes is a notes app developed with easy usage in mind."
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
-        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge"/>
+        <uap:DefaultTile Wide310x150Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Wide310x150Logo.png" Square71x71Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\SmallTile.png" Square310x310Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\LargeTile.png"/>
+        <uap:SplashScreen Image="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\SplashScreen.png" />
+        <uap:LockScreen BadgeLogo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
   </Applications>
