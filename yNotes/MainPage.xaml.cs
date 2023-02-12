@@ -53,6 +53,8 @@ namespace yNotes
             LoadStuff();
 
             editButtonSP.Visibility = Visibility.Collapsed;
+
+            XboxSupport();
         }
 
         private void saveB_Click(object sender, RoutedEventArgs e)

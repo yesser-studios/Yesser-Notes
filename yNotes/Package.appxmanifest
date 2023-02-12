@@ -39,7 +39,7 @@
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Wide310x150Logo.png" Square71x71Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\SmallTile.png" Square310x310Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\SplashScreen.png" />
-        <uap:LockScreen BadgeLogo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\BadgeLogo.png" Notification="badge"/>
+        <uap:LockScreen BadgeLogo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\BadgeLogo.png" Notification="badgeAndTileText"/>
       </uap:VisualElements>
     </Application>
   </Applications>
