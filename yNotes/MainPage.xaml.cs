@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.System.Profile;
 using Windows.ApplicationModel.VoiceCommands;
+using Windows.UI;
 
 // Dokumentaci k šabloně položky Prázdná stránka najdete na adrese https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x405
 
@@ -46,9 +47,15 @@ namespace yNotes
         /// </summary>
         ListBoxItem selectedItem = null;
 
+        Brush defaultPRColor;
+        Brush redPRColor;
+
         public MainPage()
         {
             InitializeComponent();
+
+            defaultPRColor = noteLengthPR.Foreground;
+            redPRColor = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
 
             LoadStuff();
 
@@ -61,10 +68,11 @@ namespace yNotes
         {
             if (noteTB.Text.Length <= 0) return;
 
-            ListBoxItem item = new ListBoxItem();
-            item.Content = noteTB.Text;
+            TextBlock block = new TextBlock();
+            block.TextWrapping = TextWrapping.WrapWholeWords;
+            block.Text = noteTB.Text;
 
-            notesLB.Items.Add(item);
+            notesLB.Items.Add(block);
 
             if (options[0])
             {
@@ -96,9 +104,9 @@ namespace yNotes
             List<string> strings = new List<string>();
             foreach (object obj in objects)
             {
-                ListBoxItem lBI = obj as ListBoxItem;
+                TextBlock lBI = obj as TextBlock;
                 if (lBI == null) continue;
-                string text = lBI.Content as string;
+                string text = lBI.Text;
                 strings.Add(text);
             }
             string[] stringArray = strings.ToArray();
@@ -133,6 +141,8 @@ namespace yNotes
 
         private void LoadNotes()
         {
+            notesLB.Items.Clear();
+
             object raw = localSettings.Values["notes"];
             if (raw == null) return;
 
@@ -144,10 +154,11 @@ namespace yNotes
 
             foreach (string itemString in strings)
             {
-                ListBoxItem item = new ListBoxItem();
-                item.Content = itemString;
+                TextBlock block = new TextBlock();
+                block.TextWrapping = TextWrapping.WrapWholeWords;
+                block.Text = itemString;
 
-                notesLB.Items.Add(item);
+                notesLB.Items.Add(block);
             }
         }
 
@@ -266,6 +277,14 @@ namespace yNotes
                 ExportABB.Visibility = Visibility.Collapsed;
                 ImportABB.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private void noteTB_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            double value = (double)noteTB.Text.Length / noteTB.MaxLength * 100;
+            noteLengthPR.Value = value;
+
+            noteLengthPR.Foreground = value == 100 ? redPRColor : defaultPRColor;
         }
     }
 }
