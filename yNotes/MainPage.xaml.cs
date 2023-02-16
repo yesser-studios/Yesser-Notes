@@ -264,8 +264,8 @@ namespace yNotes
             notesLB.Items.Clear();
             foreach (string note in notes)
             {
-                ListBoxItem item = new ListBoxItem();
-                item.Content = note;
+                TextBlock item = new TextBlock();
+                item.Text = note;
                 notesLB.Items.Add(item);
             }
         }

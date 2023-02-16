@@ -86,7 +86,7 @@ namespace yNotes
         {
             foreach (var item in lBItems)
             {
-                lines.Add((string)item.Content);
+                lines.Add((item.Content as TextBlock).Text);
             }
         }
     }
