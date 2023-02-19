@@ -21,6 +21,8 @@ using Windows.UI.Xaml.Navigation;
 using Windows.System.Profile;
 using Windows.ApplicationModel.VoiceCommands;
 using Windows.UI;
+using Windows.UI.Core;
+using Windows.UI.Xaml.Media.Animation;
 
 // Dokumentaci k šabloně položky Prázdná stránka najdete na adrese https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x405
 
@@ -286,14 +288,7 @@ namespace yNotes
 
             noteLengthPR.Foreground = value == 100 ? redPRColor : defaultPRColor;
 
-            if (noteLengthPR.Value >= 1)
-            {
-                noteLengthPR.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                noteLengthPR.Visibility = Visibility.Collapsed;
-            }
+            _ = noteLengthPR.Width;
         }
     }
 }
