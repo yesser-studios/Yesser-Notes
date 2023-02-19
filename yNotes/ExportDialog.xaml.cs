@@ -22,10 +22,10 @@ namespace yNotes
 {
     public sealed partial class ExportDialog : ContentDialog
     {
-        ListBoxItem[] lBItems;
+        TextBlock[] lBItems;
         List<string> lines = new List<string>();
 
-        public ExportDialog(ListBoxItem[] lBItems)
+        public ExportDialog(TextBlock[] lBItems)
         {
             this.InitializeComponent();
             this.lBItems = lBItems;
@@ -86,7 +86,7 @@ namespace yNotes
         {
             foreach (var item in lBItems)
             {
-                lines.Add((item.Content as TextBlock).Text);
+                lines.Add(item.Text);
             }
         }
     }

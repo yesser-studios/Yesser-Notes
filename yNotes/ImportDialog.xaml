@@ -20,7 +20,7 @@
             <TextBlock x:Name="NoSelectedFileL" x:Uid="NoSelectedFile" Text="No File Selected!" />
             <TextBlock x:Name="SelectedFileL" x:Uid="SelectedFile" Text="Selected File:" Visibility="Collapsed"/>
 
-            <Button x:Name="selectFileB" x:Uid="SelectFileB" Content="Select File" Style="{StaticResource AccentButtonStyle}" Margin="10, 0, 0, 10" Click="SelectFileB_Click" />
+            <Button x:Name="selectFileB" x:Uid="SelectFileB" Content="Select File" Style="{StaticResource AccentButtonStyle}" Margin="10,5,0,10" Click="SelectFileB_Click" />
 
             <TextBlock x:Name="previewHeaderL" x:Uid="Preview" Text="Preview:" Margin="10, 0, 0, 5" Visibility="Collapsed"/>
             <TextBlock x:Name="previewL" Text="PLACEHOLDER" Margin="20, 0, 0, 0" Visibility="Collapsed"/>

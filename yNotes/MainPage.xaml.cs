@@ -193,8 +193,8 @@ namespace yNotes
             if (objects == null || objects.Length <= 0)
                 return;
 
-            List<ListBoxItem> items = new List<ListBoxItem>();
-            foreach (ListBoxItem item in objects)
+            List<TextBlock> items = new List<TextBlock>();
+            foreach (TextBlock item in objects)
             {
                 items.Add(item);
             }
