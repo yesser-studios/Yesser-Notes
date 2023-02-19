@@ -285,6 +285,15 @@ namespace yNotes
             noteLengthPR.Value = value;
 
             noteLengthPR.Foreground = value == 100 ? redPRColor : defaultPRColor;
+
+            if (noteLengthPR.Value >= 1)
+            {
+                noteLengthPR.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                noteLengthPR.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }
