@@ -53,16 +53,7 @@
                 <ListBox Height="300" Width="400" Margin="5" SelectionMode="Extended" x:Name="notesLB" />
 
                 <Grid HorizontalAlignment="Center" x:Name="TextBoxSP">
-                    <TextBox x:Uid="TextBox" x:Name="noteTB" MaxLength="500" Width="420" Margin="0,5,0,5" PlaceholderText="Enter Note" HorizontalAlignment="Center" TextWrapping="Wrap" IsSpellCheckEnabled="True" VerticalAlignment="Center" TextChanging="noteTB_TextChanging">
-                        <TextBox.RenderTransform>
-                            <TranslateTransform x:Name="MyTranslateTransform" />
-                        </TextBox.RenderTransform>
-                        <TextBox.Transitions>
-                            <TransitionCollection>
-                                <RepositionThemeTransition />
-                            </TransitionCollection>
-                        </TextBox.Transitions>
-                    </TextBox>
+                    <TextBox x:Uid="TextBox" x:Name="noteTB" MaxLength="500" Width="420" Margin="0,5,0,5" PlaceholderText="Enter Note" HorizontalAlignment="Center" TextWrapping="Wrap" IsSpellCheckEnabled="True" VerticalAlignment="Center" TextChanging="noteTB_TextChanging" />
                     <muxc:ProgressRing x:Name="noteLengthPR" HorizontalAlignment="Left" IsIndeterminate="False" Margin="457,0,0,0" />
                 </Grid>
 
