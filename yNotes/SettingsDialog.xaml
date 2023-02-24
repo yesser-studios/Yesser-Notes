@@ -22,5 +22,10 @@
     <StackPanel Orientation="Vertical">
         <TextBlock Style="{StaticResource SecondaryHeader}" Text="Text Editing" x:Uid="TextEditing" />
         <ToggleSwitch OnContent="Automatically Clear Text Box" OffContent="Automatically Clear Text Box" x:Uid="AutoClearTB" x:Name="SaveDStateSaving" Toggled="SaveDStateSaving_Toggled" />
+
+        <TextBlock x:Uid="ReportHeader" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" TextAlignment="Center" Text="To report a bug or suggest a feature, please contact us:" />
+        <TextBlock HorizontalAlignment="Center" TextWrapping="WrapWholeWords" TextAlignment="Center">
+            <Hyperlink NavigateUri="mailto:yesseruseryt@gmail.com">yesseruseryt@gmail.com</Hyperlink>
+        </TextBlock>
     </StackPanel>
 </ContentDialog>

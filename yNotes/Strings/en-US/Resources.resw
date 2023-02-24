@@ -179,6 +179,9 @@ Do you want to continue?</value>
   <data name="Preview.Text" xml:space="preserve">
     <value>Preview:</value>
   </data>
+  <data name="ReportHeader.Text" xml:space="preserve">
+    <value>To report a bug or suggest a feature, please contact us:</value>
+  </data>
   <data name="Save.ToolTipService.ToolTip" xml:space="preserve">
     <value>Save (Enter)</value>
   </data>

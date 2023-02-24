@@ -179,6 +179,9 @@ Chcete pokračovat?</value>
   <data name="Preview.Text" xml:space="preserve">
     <value>Náhled:</value>
   </data>
+  <data name="ReportHeader.Text" xml:space="preserve">
+    <value>Pro nahlášení chyby nebo návrhu funkce nás prosím kontaktujte zde:</value>
+  </data>
   <data name="Save.ToolTipService.ToolTip" xml:space="preserve">
     <value>Uložit (Enter)</value>
   </data>
