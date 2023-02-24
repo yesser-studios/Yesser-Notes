@@ -210,11 +210,21 @@ Do you want to continue?</value>
     <value>Got it!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Version 1.1:
-+ Added import (Not supported on Xbox)
-+ Added Xbox support (Import and export not supported on it)
-+ Added a "What's new" popup
-+ Added support for systems using the x86 architecture</value>
+    <value>Version 1.1.3:
++ Added a contact email for bug report and feature request.
+
+Version 1.1.2:
+O Made the text box centred.
+
+Version 1.1.1:
++ Added an indicator of the note length limit
++ Added note text wrapping
+
+Version 1.1.0:
++ Import notes from a text file!
++ Added Xbox support! (Notes are NOT stored in the cloud)
++ Added x86 system support
++ Added a "What's new" popup</value>
   </data>
   <data name="WhatsNewTT.Title" xml:space="preserve">
     <value>What's new</value>

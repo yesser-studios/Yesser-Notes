@@ -210,11 +210,21 @@ Chcete pokračovat?</value>
     <value>Mám to!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Verze 1.1:
-+ Přidán import (Není dostupné na Xboxu)
-+ Přidána podpora pro Xbox (Import a export na něm nejsou dostupné)
-+ Přidáno vyskakovací okno "Co je nového" 
-+ Přidána podpora pro systémy používající archtekturu x86</value>
+    <value>Verze 1.1.3:
++ Přidán e-mail pro nahlášení chyby nebo návrh funkce aplikace.
+
+Verze 1.1.2:
+O Textové pole zarovnáno na střed
+
+Verze 1.1.1:
++ Přidán indikátor limitu délky poznámek
++ Přidáno zalamování textu poznámek podle slov
+
+Verze 1.1.0:
++ Přidán import poznámek z textového souboru.
++ Přidána podpora pro Xbox (Poznámky nejsou uloženy v Cloudu)
++ Přidána podpora pro systémy x86
++ Přidáno vyskakovací okno "Co je nového"</value>
   </data>
   <data name="WhatsNewTT.Title" xml:space="preserve">
     <value>Co je nového</value>
