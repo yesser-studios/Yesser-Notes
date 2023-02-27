@@ -13,10 +13,19 @@
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
 
     <ContentDialog.Resources>
+        <!--#region Brushes-->
+        <SolidColorBrush x:Key="GreyBrush" Color="Gray" />
+        <!--#endregion-->
+        
+        <!--#region Styles-->
         <Style x:Name="SecondaryHeader" TargetType="TextBlock">
             <Setter Property="FontSize" Value="18" />
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
+        <Style x:Name="GreyText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource GreyBrush}" />
+        </Style>
+        <!--#endregion-->
     </ContentDialog.Resources>
 
     <StackPanel Orientation="Vertical">
@@ -27,5 +36,6 @@
         <TextBlock HorizontalAlignment="Center" TextWrapping="WrapWholeWords" TextAlignment="Center">
             <Hyperlink NavigateUri="mailto:yesseruseryt@gmail.com">yesseruseryt@gmail.com</Hyperlink>
         </TextBlock>
+        <TextBlock x:Name="VersionL" x:Uid="Version" Text="Version: " HorizontalAlignment="Center" Margin="0,5,0,0" Style="{StaticResource GreyText}" />
     </StackPanel>
 </ContentDialog>
