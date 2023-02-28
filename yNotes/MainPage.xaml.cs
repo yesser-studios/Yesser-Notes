@@ -33,7 +33,7 @@ namespace yNotes
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public readonly int updateID = 6;
+        public readonly int updateID = 7;
         int prevUpdateID;
 
         readonly ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;

@@ -213,7 +213,10 @@ Chcete pokračovat?</value>
     <value>Mám to!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Verze 1.1.4:
+    <value>Verze 1.1.5:
+- Opravena chyba kde vůbec nefunguje úprava poznámek.
+
+Verze 1.1.4:
 + Přidán indikátor verze do nastavení
 
 Verze 1.1.3:
