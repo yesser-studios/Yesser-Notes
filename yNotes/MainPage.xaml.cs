@@ -47,7 +47,7 @@ namespace yNotes
         /// <summary>
         /// Used for editing.
         /// </summary>
-        ListBoxItem selectedItem = null;
+        TextBlock selectedBlock = null;
 
         Brush defaultPRColor;
         Brush redPRColor;
@@ -218,18 +218,14 @@ namespace yNotes
         private void editB_Click(object sender, RoutedEventArgs e)
         {
             object selectedRaw = notesLB.SelectedItem;
-            selectedItem = selectedRaw as ListBoxItem;
+            selectedBlock = selectedRaw as TextBlock;
 
-            if (selectedItem != null)
+            if (selectedBlock != null)
             {
                 mainButtonSP.Visibility = Visibility.Collapsed;
                 editButtonSP.Visibility = Visibility.Visible;
 
-                TextBlock noteBlock = selectedItem.Content as TextBlock;
-                if (noteBlock != null)
-                    noteTB.Text = noteBlock.Text;
-                else
-                    noteTB.Text = selectedItem.Content as string;
+                noteTB.Text = selectedBlock.Text;
                 noteTB.Focus(FocusState.Keyboard);
             }
             else
@@ -241,7 +237,7 @@ namespace yNotes
 
         private void editSaveB_Click(object sender, RoutedEventArgs e)
         {
-            selectedItem.Content = noteTB.Text;
+            selectedBlock.Text = noteTB.Text;
 
             editButtonSP.Visibility = Visibility.Collapsed;
             mainButtonSP.Visibility = Visibility.Visible;
