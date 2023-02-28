@@ -225,7 +225,11 @@ namespace yNotes
                 mainButtonSP.Visibility = Visibility.Collapsed;
                 editButtonSP.Visibility = Visibility.Visible;
 
-                noteTB.Text = selectedItem.Content as string;
+                TextBlock noteBlock = selectedItem.Content as TextBlock;
+                if (noteBlock != null)
+                    noteTB.Text = noteBlock.Content;
+                else
+                    noteTB.Text = selectedItem.Content as string;
                 noteTB.Focus(FocusState.Keyboard);
             }
             else
