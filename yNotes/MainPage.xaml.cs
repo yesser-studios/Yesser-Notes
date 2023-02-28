@@ -227,7 +227,7 @@ namespace yNotes
 
                 TextBlock noteBlock = selectedItem.Content as TextBlock;
                 if (noteBlock != null)
-                    noteTB.Text = noteBlock.Content;
+                    noteTB.Text = noteBlock.Text;
                 else
                     noteTB.Text = selectedItem.Content as string;
                 noteTB.Focus(FocusState.Keyboard);
