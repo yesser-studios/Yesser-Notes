@@ -31,6 +31,12 @@
                 </AppBarButton>
             </CommandBar.PrimaryCommands>
             <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="Print" x:Name="PrintAllABB" Icon="Print" Label="Print All" Click="PrintAllABB_Click">
+                    <AppBarButton.KeyboardAccelerators>
+                        <KeyboardAccelerator Modifiers="Control" Key="P" />
+                    </AppBarButton.KeyboardAccelerators>
+                </AppBarButton>
+                
                 <AppBarButton x:Uid="Clear" x:Name="ClearAllABB" Icon="Delete" Label="Clear All">
                     <Button.Flyout>
                         <Flyout x:Name="ClearFO">
