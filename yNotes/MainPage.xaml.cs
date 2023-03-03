@@ -23,6 +23,7 @@ using Windows.ApplicationModel.VoiceCommands;
 using Windows.UI;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.ApplicationModel;
 
 // Dokumentaci k šabloně položky Prázdná stránka najdete na adrese https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x405
 
@@ -33,7 +34,9 @@ namespace yNotes
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public readonly int updateID = 7;
+        PackageVersion version;
+
+        public int updateID;
         int prevUpdateID;
 
         readonly ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
@@ -166,6 +169,8 @@ namespace yNotes
 
         private void LoadVersion()
         {
+            LoadCurrentVersion();
+
             object raw = localSettings.Values[nameof(updateID)];
 
             int? prevVersion = raw as int?;
@@ -174,6 +179,15 @@ namespace yNotes
             prevUpdateID = prevVersion != null ? (int)prevVersion : updateID;
 
             SaveStuff();
+        }
+
+        private void LoadCurrentVersion()
+        {
+            Package package = Package.Current;
+            PackageId packageId = package.Id;
+            version = packageId.Version;
+
+            updateID = version.Major * 1000000 + version.Minor * 1000 + version.Build;
         }
 
         private void ShowWhatsNewPopup()
