@@ -213,7 +213,11 @@ Chcete pokračovat?</value>
     <value>Mám to!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Verze 1.1.5:
+    <value>Verze 1.2.0:
++ Přidána možnost tisku všech poznámek.
+O Změněna podmínka pro zobrazení dialogu "Co je nového" - nyní programátoři nemusí manuálně měnit aktuální ID verze.
+
+Verze 1.1.5:
 - Opravena chyba kde vůbec nefunguje úprava poznámek.
 
 Verze 1.1.4:

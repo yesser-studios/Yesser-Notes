@@ -213,7 +213,11 @@ Do you want to continue?</value>
     <value>Got it!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Version 1.1.5:
+    <value>Version 1.2.0:
++ Added the option to print all notes.
+O Changed the condition of showing the "What's new" prompt - now programmers don't have to manually change the app version ID.
+
+Version 1.1.5:
 - Obliterated a bug that editing notes won't work.
 
 Version 1.1.4:
