@@ -141,7 +141,7 @@ Do you want to continue?</value>
     <value>Copied to clipboard!</value>
   </data>
   <data name="Copy.ToolTipService.ToolTip" xml:space="preserve">
-    <value>Copy to clipboard</value>
+    <value>Copy to Clipboard</value>
   </data>
   <data name="Delete.ToolTipService.ToolTip" xml:space="preserve">
     <value>Remove Selected (Delete)</value>
@@ -181,6 +181,9 @@ Do you want to continue?</value>
   </data>
   <data name="NoSelectedFile.Text" xml:space="preserve">
     <value>No selected file!</value>
+  </data>
+  <data name="Notify.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Add a Notification</value>
   </data>
   <data name="Preview.Text" xml:space="preserve">
     <value>Preview:</value>

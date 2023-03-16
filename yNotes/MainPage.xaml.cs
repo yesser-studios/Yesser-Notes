@@ -324,6 +324,11 @@ namespace yNotes
             _ = noteLengthPR.Width;
         }
 
+        private void NotificationB_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         /*
         #region Register for printing
 

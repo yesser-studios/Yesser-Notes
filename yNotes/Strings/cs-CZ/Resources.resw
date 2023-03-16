@@ -141,7 +141,7 @@ Chcete pokračovat?</value>
     <value>Zkopírováno do schránky!</value>
   </data>
   <data name="Copy.ToolTipService.ToolTip" xml:space="preserve">
-    <value>Zkopírovat do schránky</value>
+    <value>Zkopírovat do Schránky</value>
   </data>
   <data name="Delete.ToolTipService.ToolTip" xml:space="preserve">
     <value>Smazat vybrané (Delete)</value>
@@ -181,6 +181,9 @@ Chcete pokračovat?</value>
   </data>
   <data name="NoSelectedFile.Text" xml:space="preserve">
     <value>Není vybraný soubor!</value>
+  </data>
+  <data name="Notify.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Přidat Oznámení</value>
   </data>
   <data name="Preview.Text" xml:space="preserve">
     <value>Náhled:</value>

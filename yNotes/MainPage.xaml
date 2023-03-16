@@ -76,6 +76,14 @@
                         <SymbolIcon Symbol="Save" />
                     </Button>
 
+                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Notify" x:Name="NotificationB" Click="NotificationB_Click" ToolTipService.ToolTip="Add a notifier">
+                        <Button.KeyboardAccelerators>
+                            <KeyboardAccelerator Modifiers="Control" Key="N" />
+                        </Button.KeyboardAccelerators>
+                        
+                        <SymbolIcon Symbol="Clock" />
+                    </Button>
+
                     <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Delete" x:Name="deleteB" Style="{StaticResource DefaultButtonStyle}" Click="deleteB_Click" ToolTipService.ToolTip="Delete">
                         <Button.KeyboardAccelerators>
                             <KeyboardAccelerator Key="Delete" />
