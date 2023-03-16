@@ -30,12 +30,15 @@
                     </AppBarButton.KeyboardAccelerators>
                 </AppBarButton>
             </CommandBar.PrimaryCommands>
+            
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:Uid="Print" x:Name="PrintAllABB" Icon="Print" Label="Print All" Click="PrintAllABB_Click">
+                <!--
+                <AppBarButton x:Uid="Print" x:Name="PrintAllABB" Icon="Print" Label="Print All" Click="PrintButtonClick">
                     <AppBarButton.KeyboardAccelerators>
                         <KeyboardAccelerator Modifiers="Control" Key="P" />
                     </AppBarButton.KeyboardAccelerators>
                 </AppBarButton>
+                -->
                 
                 <AppBarButton x:Uid="Clear" x:Name="ClearAllABB" Icon="Delete" Label="Clear All">
                     <Button.Flyout>
@@ -89,9 +92,33 @@
                         <SymbolIcon Symbol="Edit" />
                     </Button>
 
+                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Copy" x:Name="copyB" Style="{StaticResource DefaultButtonStyle}" Click="copyB_Click" ToolTipService.ToolTip="Copy">
+                        <Button.KeyboardAccelerators>
+                            <KeyboardAccelerator Modifiers="Control" Key="C" />
+                        </Button.KeyboardAccelerators>
+
+                        <Button.Flyout>
+                            <Flyout x:Name="copyBFlyout">
+                                <TextBlock x:Uid="Copied" Text="Copied to clipboard!" />
+                            </Flyout>
+                        </Button.Flyout>
+
+                        <SymbolIcon Symbol="Copy" />
+                    </Button>
+
                     <muxc:TeachingTip x:Name="editNoNoteSelectedTT"
                     x:Uid="NoNote"
                     Target="{x:Bind editB}"
+                    Title="No Notes Selected!"
+                    Subtitle="You need to select a note first before editing it!">
+                        <muxc:TeachingTip.IconSource>
+                            <muxc:SymbolIconSource Symbol="Cancel" />
+                        </muxc:TeachingTip.IconSource>
+                    </muxc:TeachingTip>
+
+                    <muxc:TeachingTip x:Name="copyNoNoteSelectedTT"
+                    x:Uid="NoNote"
+                    Target="{x:Bind copyB}"
                     Title="No Notes Selected!"
                     Subtitle="You need to select a note first before editing it!">
                         <muxc:TeachingTip.IconSource>
