@@ -223,8 +223,9 @@ Chcete pokračovat?</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
     <value>Verze 1.2.0:
-+ Přidána možnost tisku všech poznámek.
++ Přidáno kopírování do schránky
 O Změněna podmínka pro zobrazení dialogu "Co je nového" - nyní programátoři nemusí manuálně měnit aktuální ID verze.
+O Změněn název aplikace z yNotes na Yesser Notes.
 
 Verze 1.1.5:
 - Opravena chyba kde vůbec nefunguje úprava poznámek.
@@ -236,17 +237,7 @@ Verze 1.1.3:
 + Přidán e-mail pro nahlášení chyby nebo návrh funkce aplikace.
 
 Verze 1.1.2:
-O Textové pole zarovnáno na střed
-
-Verze 1.1.1:
-+ Přidán indikátor limitu délky poznámek
-+ Přidáno zalamování textu poznámek podle slov
-
-Verze 1.1.0:
-+ Přidán import poznámek z textového souboru.
-+ Přidána podpora pro Xbox (Poznámky nejsou uloženy v Cloudu)
-+ Přidána podpora pro systémy x86
-+ Přidáno vyskakovací okno "Co je nového"</value>
+O Textové pole zarovnáno na střed</value>
   </data>
   <data name="WhatsNewTT.Title" xml:space="preserve">
     <value>Co je nového</value>
