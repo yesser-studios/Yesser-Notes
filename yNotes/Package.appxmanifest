@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="25078YesserStudios.yNotes"
+    Name="25078YesserStudios.YesserNotes"
     Publisher="CN=Yesser Studios UWP"
-    Version="1.1.5.0" />
+    Version="1.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="d1df0e22-ad0a-42dd-9fc8-f36261046618" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>yNotes</DisplayName>
+    <DisplayName>Yesser Notes</DisplayName>
     <PublisherDisplayName>Yesser Studios</PublisherDisplayName>
     <Logo>Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\StoreLogo.png</Logo>
   </Properties>
@@ -32,10 +32,10 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="yNotes.App">
       <uap:VisualElements
-        DisplayName="yNotes"
+        DisplayName="Yesser Notes"
         Square150x150Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Square150x150Logo.png"
         Square44x44Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Square44x44Logo.png"
-        Description="yNotes is a notes app developed with easy usage in mind."
+        Description="Yesser Notes is a notes app developed with easy usage in mind."
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Wide310x150Logo.png" Square71x71Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\SmallTile.png" Square310x310Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\SplashScreen.png" />
