@@ -137,6 +137,12 @@ Do you want to continue?</value>
   <data name="ClearOK.Content" xml:space="preserve">
     <value>Yes, clear all my notes</value>
   </data>
+  <data name="Copied.Text" xml:space="preserve">
+    <value>Copied to clipboard!</value>
+  </data>
+  <data name="Copy.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
   <data name="Delete.ToolTipService.ToolTip" xml:space="preserve">
     <value>Remove Selected (Delete)</value>
   </data>

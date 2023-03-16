@@ -137,6 +137,12 @@ Chcete pokračovat?</value>
   <data name="ClearOK.Content" xml:space="preserve">
     <value>Ano, vymazat všechny poznámky</value>
   </data>
+  <data name="Copied.Text" xml:space="preserve">
+    <value>Zkopírováno do schránky!</value>
+  </data>
+  <data name="Copy.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Zkopírovat do schránky</value>
+  </data>
   <data name="Delete.ToolTipService.ToolTip" xml:space="preserve">
     <value>Smazat vybrané (Delete)</value>
   </data>
