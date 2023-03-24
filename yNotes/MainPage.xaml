@@ -68,7 +68,7 @@
 
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="mainButtonSP">
-                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Save" x:Name="saveB" Style="{StaticResource AccentButtonStyle}" Click="saveB_Click" ToolTipService.ToolTip="Save">
+                    <Button Margin="5" HorizontalAlignment="Center" Width="100" Height="100" x:Uid="Save" x:Name="saveB" Style="{StaticResource AccentButtonStyle}" Click="saveB_Click" ToolTipService.ToolTip="Save">
                         <Button.KeyboardAccelerators>
                             <KeyboardAccelerator Key="Enter" />
                         </Button.KeyboardAccelerators>
@@ -76,23 +76,41 @@
                         <SymbolIcon Symbol="Save" />
                     </Button>
 
-                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Notify" x:Name="NotificationB" Click="NotificationB_Click" ToolTipService.ToolTip="Add a notifier">
+                    <!-- <Button Margin="5" HorizontalAlignment="Center" Width="100" Height="100" x:Uid="Notify" x:Name="NotificationB" Click="NotificationB_Click" ToolTipService.ToolTip="Add a notifier">
                         <Button.KeyboardAccelerators>
                             <KeyboardAccelerator Modifiers="Control" Key="N" />
                         </Button.KeyboardAccelerators>
-                        
+
+                        <Button.Flyout>
+                            <Flyout x:Name="NotifyFlyout">
+                                <StackPanel Orientation="Vertical">
+                                    <CalendarDatePicker x:Name="NotifyDate" HorizontalAlignment="Center" Margin="5"/>
+                                    <TimePicker x:Name="NotifyTime" HorizontalAlignment="Center" Time="12:00" Margin="5"/>
+
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button x:Name="NotifyOKB" x:Uid="OK" Style="{StaticResource AccentButtonStyle}" Click="NotifyOKB_Click" Width="50" Height="50" Margin="5">
+                                            <Button.KeyboardAccelerators>
+                                                <KeyboardAccelerator Key="Enter" />
+                                            </Button.KeyboardAccelerators>
+
+                                            <SymbolIcon Symbol="Accept" />
+                                        </Button>
+                                        <Button x:Name="NotifyCancelB" x:Uid="Cancel" Style="{StaticResource DefaultButtonStyle}" Click="NotifyCancelB_Click" Width="50" Height="50" Margin="5">
+                                            <Button.KeyboardAccelerators>
+                                                <KeyboardAccelerator Key="Escape" />
+                                            </Button.KeyboardAccelerators>
+
+                                            <SymbolIcon Symbol="Cancel" />
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+
                         <SymbolIcon Symbol="Clock" />
-                    </Button>
+                    </Button> -->
 
-                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Delete" x:Name="deleteB" Style="{StaticResource DefaultButtonStyle}" Click="deleteB_Click" ToolTipService.ToolTip="Delete">
-                        <Button.KeyboardAccelerators>
-                            <KeyboardAccelerator Key="Delete" />
-                        </Button.KeyboardAccelerators>
-
-                        <SymbolIcon Symbol="Delete" />
-                    </Button>
-
-                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Edit" x:Name="editB" Style="{StaticResource DefaultButtonStyle}" Click="editB_Click" ToolTipService.ToolTip="Edit">
+                    <Button Margin="5" HorizontalAlignment="Center" Width="100" Height="100" x:Uid="Edit" x:Name="editB" Style="{StaticResource DefaultButtonStyle}" Click="editB_Click" ToolTipService.ToolTip="Edit">
                         <Button.KeyboardAccelerators>
                             <KeyboardAccelerator Modifiers="Control" Key="E" />
                         </Button.KeyboardAccelerators>
@@ -100,19 +118,60 @@
                         <SymbolIcon Symbol="Edit" />
                     </Button>
 
-                    <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Copy" x:Name="copyB" Style="{StaticResource DefaultButtonStyle}" Click="copyB_Click" ToolTipService.ToolTip="Copy">
-                        <Button.KeyboardAccelerators>
-                            <KeyboardAccelerator Modifiers="Control" Key="C" />
-                        </Button.KeyboardAccelerators>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
 
-                        <Button.Flyout>
-                            <Flyout x:Name="copyBFlyout">
-                                <TextBlock x:Uid="Copied" Text="Copied to clipboard!" />
-                            </Flyout>
-                        </Button.Flyout>
+                        <Button Grid.Row="0" Grid.Column="0" Margin="5" HorizontalAlignment="Center" Width="45" Height="45" x:Uid="Copy" x:Name="copyB" Style="{StaticResource DefaultButtonStyle}" Click="copyB_Click" ToolTipService.ToolTip="Copy">
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Modifiers="Control" Key="C" />
+                            </Button.KeyboardAccelerators>
 
-                        <SymbolIcon Symbol="Copy" />
-                    </Button>
+                            <Button.Flyout>
+                                <Flyout x:Name="copyBFlyout">
+                                    <TextBlock x:Uid="Copied" Text="Copied to clipboard!" />
+                                </Flyout>
+                            </Button.Flyout>
+
+                            <SymbolIcon Symbol="Copy"/>
+                        </Button>
+                        
+                        <Button Grid.Row="0" Grid.Column="1" Margin="5" HorizontalAlignment="Center" Width="45" Height="45" x:Uid="Cut" x:Name="cutB" Style="{StaticResource DefaultButtonStyle}" Click="cutB_Click" ToolTipService.ToolTip="Cut">
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Modifiers="Control" Key="X" />
+                            </Button.KeyboardAccelerators>
+
+                            <Button.Flyout>
+                                <Flyout x:Name="cutBFlyout">
+                                    <TextBlock x:Uid="Copied" Text="Copied to clipboard!" />
+                                </Flyout>
+                            </Button.Flyout>
+
+                            <SymbolIcon Symbol="Cut"/>
+                        </Button>
+                        
+                        <Button Grid.Row="1" Grid.Column="0" Margin="5" HorizontalAlignment="Center" Width="45" Height="45" x:Uid="Paste" x:Name="pasteB" Style="{StaticResource DefaultButtonStyle}" Click="pasteB_Click" ToolTipService.ToolTip="Paste">
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Modifiers="Control" Key="V" />
+                            </Button.KeyboardAccelerators>
+
+                            <SymbolIcon Symbol="Paste"/>
+                        </Button>
+
+                        <Button Grid.Row="1" Grid.Column="1" Margin="5" HorizontalAlignment="Center" Width="45" Height="45" x:Uid="Delete" x:Name="deleteB" Style="{StaticResource DefaultButtonStyle}" Click="deleteB_Click" ToolTipService.ToolTip="Delete">
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Delete" />
+                            </Button.KeyboardAccelerators>
+
+                            <SymbolIcon Symbol="Delete" />
+                        </Button>
+                    </Grid>
 
                     <muxc:TeachingTip x:Name="editNoNoteSelectedTT"
                     x:Uid="NoNote"
@@ -134,12 +193,22 @@
                         </muxc:TeachingTip.IconSource>
                     </muxc:TeachingTip>
 
+                    <!-- <muxc:TeachingTip x:Name="notifyNoDateTimeTT"
+                        x:Uid="NoDateTime"
+                        Target="{x:Bind NotifyOKB}"
+                        Title="No Date Selected!"
+                        Subtitle="You need to select a date before you can set a notification!">
+                        <muxc:TeachingTip.IconSource>
+                            <muxc:SymbolIconSource Symbol="Cancel" />
+                        </muxc:TeachingTip.IconSource>
+                    </muxc:TeachingTip> -->
+
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="editButtonSP" >
                     <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Save" x:Name="editSaveB" Style="{StaticResource AccentButtonStyle}" Click="editSaveB_Click" ToolTipService.ToolTip="Save">
                         <Button.KeyboardAccelerators>
-                            <KeyboardAccelerator Key="Enter" />
+                            <KeyboardAccelerator Modifiers="Control" Key="Enter" />
                         </Button.KeyboardAccelerators>
 
                         <SymbolIcon Symbol="Save" />

@@ -141,7 +141,10 @@ Chcete pokračovat?</value>
     <value>Zkopírováno do schránky!</value>
   </data>
   <data name="Copy.ToolTipService.ToolTip" xml:space="preserve">
-    <value>Zkopírovat do Schránky</value>
+    <value>Zkopírovat do Schránky (Ctrl + C)</value>
+  </data>
+  <data name="Cut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vyjmout (Ctrl + X)</value>
   </data>
   <data name="Delete.ToolTipService.ToolTip" xml:space="preserve">
     <value>Smazat vybrané (Delete)</value>
@@ -185,6 +188,12 @@ Chcete pokračovat?</value>
   <data name="Notify.ToolTipService.ToolTip" xml:space="preserve">
     <value>Přidat Oznámení</value>
   </data>
+  <data name="OK.ToolTipService.ToolTip" xml:space="preserve">
+    <value>OK (Enter)</value>
+  </data>
+  <data name="Paste.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Vložit (Ctrl + V)</value>
+  </data>
   <data name="Preview.Text" xml:space="preserve">
     <value>Náhled:</value>
   </data>
@@ -227,6 +236,7 @@ Chcete pokračovat?</value>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
     <value>Verze 1.2.0:
 + Přidáno kopírování do schránky
+O Změněna klávesová zkratka pro uložení poznámky z Enter na Ctrl+Enter
 O Změněna podmínka pro zobrazení dialogu "Co je nového" - nyní programátoři nemusí manuálně měnit aktuální ID verze.
 O Změněn název aplikace z yNotes na Yesser Notes.
 

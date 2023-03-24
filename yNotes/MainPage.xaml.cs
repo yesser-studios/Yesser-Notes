@@ -28,6 +28,10 @@ using Windows.Graphics.Printing;
 using Windows.UI.Xaml.Printing;
 using Windows.ApplicationModel.Core;
 using Windows.ApplicationModel.DataTransfer;
+using Windows.UI.Notifications;
+using Windows.Data.Xml.Dom;
+using Windows.System;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 // Dokumentaci k šabloně položky Prázdná stránka najdete na adrese https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x405
 
@@ -42,6 +46,7 @@ namespace yNotes
 
         public int updateID;
         int prevUpdateID;
+        bool notify = false;
 
         readonly ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
@@ -77,6 +82,26 @@ namespace yNotes
         {
             if (noteTB.Text.Length <= 0) return;
 
+            /*
+            if (notify)
+            {
+                DateTimeOffset time = (DateTimeOffset) (NotifyDate.Date + NotifyTime.Time);
+
+                new ToastContentBuilder().AddArgument(notesLB.Items.Count.ToString()).AddText(noteTB.Text).Schedule(time);
+
+                
+                ToastNotifier notifier = ToastNotificationManager.CreateToastNotifier();
+
+                XmlDocument document = new XmlDocument();
+                document.CreateTextNode(noteTB.Text);
+
+                ScheduledToastNotification scheduledToast = new ScheduledToastNotification(document, time);
+
+                notifier.AddToSchedule(scheduledToast);
+                
+            }
+            */
+        
             TextBlock block = new TextBlock();
             block.TextWrapping = TextWrapping.WrapWholeWords;
             block.Text = noteTB.Text;
@@ -275,19 +300,6 @@ namespace yNotes
         }
         #endregion
 
-        private void copyB_Click(object sender, RoutedEventArgs e)
-        {
-            object selectedRaw = notesLB.SelectedItem;
-            selectedBlock = selectedRaw as TextBlock;
-
-            if (selectedBlock != null)
-            {
-                var dataPackage = new DataPackage();
-                dataPackage.SetText(selectedBlock.Text);
-                Clipboard.SetContent(dataPackage);
-            }
-        }
-
         private void ImportABB_Click(object sender, RoutedEventArgs e)
         {
             ImportDialog dialog = new ImportDialog(this);
@@ -324,9 +336,74 @@ namespace yNotes
             _ = noteLengthPR.Width;
         }
 
+        /* Notification
         private void NotificationB_Click(object sender, RoutedEventArgs e)
         {
+            
+            if (!NotifyFlyout.IsOpen) NotifyFlyout.Hide();
+            
+        }
 
+        private void NotifyOKB_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (NotifyDate != null && NotifyTime != null)
+            {
+                notify = true;
+                NotifyFlyout.Hide();
+                NotificationB.Style = NotifyOKB.Style;
+            }
+            else
+            {
+                notifyNoDateTimeTT.IsOpen = true;
+            }
+            
+        }
+
+        private void NotifyCancelB_Click(object sender, RoutedEventArgs e)
+        {
+            notify = false;
+            NotifyFlyout.Hide();
+            NotificationB.Style = NotifyCancelB.Style;
+        }
+        */
+
+        private void copyB_Click(object sender, RoutedEventArgs e)
+        {
+            object selectedRaw = notesLB.SelectedItem;
+            selectedBlock = selectedRaw as TextBlock;
+
+            if (selectedBlock != null)
+            {
+                var dataPackage = new DataPackage();
+                dataPackage.SetText(selectedBlock.Text);
+                Clipboard.SetContent(dataPackage);
+            }
+        }
+
+        private void cutB_Click(object sender, RoutedEventArgs e)
+        {
+            copyB_Click(sender, e);
+            deleteB_Click(sender, e);
+        }
+
+        private async void pasteB_Click(object sender, RoutedEventArgs e)
+        {
+            var dataPackageView = Clipboard.GetContent();
+            string text = await dataPackageView.GetTextAsync();
+
+            TextBlock block = new TextBlock();
+            block.TextWrapping = TextWrapping.WrapWholeWords;
+            block.Text = text;
+
+            notesLB.Items.Add(block);
+
+            if (options[0])
+            {
+                noteTB.Text = "";
+            }
+
+            SaveStuff();
         }
 
         /*

@@ -141,7 +141,10 @@ Do you want to continue?</value>
     <value>Copied to clipboard!</value>
   </data>
   <data name="Copy.ToolTipService.ToolTip" xml:space="preserve">
-    <value>Copy to Clipboard</value>
+    <value>Copy to Clipboard (Ctrl + C)</value>
+  </data>
+  <data name="Cut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cut (Ctrl + X)</value>
   </data>
   <data name="Delete.ToolTipService.ToolTip" xml:space="preserve">
     <value>Remove Selected (Delete)</value>
@@ -185,6 +188,12 @@ Do you want to continue?</value>
   <data name="Notify.ToolTipService.ToolTip" xml:space="preserve">
     <value>Add a Notification</value>
   </data>
+  <data name="OK.ToolTipService.ToolTip" xml:space="preserve">
+    <value>OK (Ctrl + Enter)</value>
+  </data>
+  <data name="Paste.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Paste (Ctrl + V)</value>
+  </data>
   <data name="Preview.Text" xml:space="preserve">
     <value>Preview:</value>
   </data>
@@ -227,6 +236,7 @@ Do you want to continue?</value>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
     <value>Version 1.2.0:
 + Added copying to clipboard.
+O Changed the keybind for saving the note from Enter to Ctrl+Enter
 O Changed the condition of showing the "What's new" prompt - now programmers don't have to manually change the app version ID.
 O Renamed app from yNotes to Yesser Notes.
 
