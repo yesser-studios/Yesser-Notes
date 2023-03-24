@@ -208,7 +208,7 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="editButtonSP" >
                     <Button Margin="5" HorizontalAlignment="Center" Width="50" Height="50" x:Uid="Save" x:Name="editSaveB" Style="{StaticResource AccentButtonStyle}" Click="editSaveB_Click" ToolTipService.ToolTip="Save">
                         <Button.KeyboardAccelerators>
-                            <KeyboardAccelerator Modifiers="Control" Key="Enter" />
+                            <KeyboardAccelerator Key="Enter" />
                         </Button.KeyboardAccelerators>
 
                         <SymbolIcon Symbol="Save" />
