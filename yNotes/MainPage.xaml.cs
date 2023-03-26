@@ -1,37 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading;
-using System.Threading.Tasks;
-using Windows.Devices.Enumeration.Pnp;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Storage;
-using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Automation.Peers;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 using Windows.System.Profile;
-using Windows.ApplicationModel.VoiceCommands;
 using Windows.UI;
-using Windows.UI.Core;
-using Windows.UI.Xaml.Media.Animation;
 using Windows.ApplicationModel;
-using Windows.Graphics.Printing;
-using Windows.UI.Xaml.Printing;
-using Windows.ApplicationModel.Core;
 using Windows.ApplicationModel.DataTransfer;
-using Windows.UI.Notifications;
-using Windows.Data.Xml.Dom;
-using Windows.System;
-using Microsoft.Toolkit.Uwp.Notifications;
 
 // Dokumentaci k šabloně položky Prázdná stránka najdete na adrese https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x405
 
