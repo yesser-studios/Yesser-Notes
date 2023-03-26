@@ -33,7 +33,7 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="yNotes.App">
+      EntryPoint="YesserNotes.App">
       <uap:VisualElements
         DisplayName="Yesser Notes"
         Square150x150Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Square150x150Logo.png"

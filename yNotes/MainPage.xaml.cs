@@ -24,7 +24,6 @@ namespace yNotes
 
         public int updateID;
         int prevUpdateID;
-        bool notify = false;
 
         readonly ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
