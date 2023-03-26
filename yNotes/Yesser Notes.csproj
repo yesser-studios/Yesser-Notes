@@ -200,7 +200,6 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\BadgeLogo.scale-100.png" />
     <Content Include="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\BadgeLogo.scale-125.png" />
     <Content Include="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\BadgeLogo.scale-150.png" />
