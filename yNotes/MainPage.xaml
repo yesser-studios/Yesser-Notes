@@ -133,11 +133,11 @@
                                 <KeyboardAccelerator Modifiers="Control" Key="C" />
                             </Button.KeyboardAccelerators>
 
-                            <Button.Flyout>
+                            <Button.Resources>
                                 <Flyout x:Name="copyBFlyout">
                                     <TextBlock x:Uid="Copied" Text="Copied to clipboard!" />
                                 </Flyout>
-                            </Button.Flyout>
+                            </Button.Resources>
 
                             <SymbolIcon Symbol="Copy"/>
                         </Button>
@@ -147,11 +147,11 @@
                                 <KeyboardAccelerator Modifiers="Control" Key="X" />
                             </Button.KeyboardAccelerators>
 
-                            <Button.Flyout>
+                            <Button.Resources>
                                 <Flyout x:Name="cutBFlyout">
                                     <TextBlock x:Uid="Copied" Text="Copied to clipboard!" />
                                 </Flyout>
-                            </Button.Flyout>
+                            </Button.Resources>
 
                             <SymbolIcon Symbol="Cut"/>
                         </Button>

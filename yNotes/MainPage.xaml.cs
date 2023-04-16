@@ -345,6 +345,7 @@ namespace yNotes
         }
         */
 
+        #region Copy, Cut and Paste
         private void copyB_Click(object sender, RoutedEventArgs e)
         {
             object selectedRaw = notesLB.SelectedItem;
@@ -352,36 +353,56 @@ namespace yNotes
 
             if (selectedBlock != null)
             {
-                var dataPackage = new DataPackage();
-                dataPackage.SetText(selectedBlock.Text);
-                Clipboard.SetContent(dataPackage);
+                try
+                {
+                    var dataPackage = new DataPackage();
+                    dataPackage.SetText(selectedBlock.Text);
+                    Clipboard.SetContent(dataPackage);
+                    copyBFlyout.ShowAt(copyB);
+                }
+                catch { return; }
             }
         }
 
         private void cutB_Click(object sender, RoutedEventArgs e)
         {
-            copyB_Click(sender, e);
-            deleteB_Click(sender, e);
+            object selectedRaw = notesLB.SelectedItem;
+            selectedBlock = selectedRaw as TextBlock;
+
+            if (selectedBlock != null)
+            {
+                try
+                {
+                    var dataPackage = new DataPackage();
+                    dataPackage.SetText(selectedBlock.Text);
+                    Clipboard.SetContent(dataPackage);
+                    deleteB_Click(sender, e);
+                    copyBFlyout.ShowAt(copyB);
+                }
+                catch { return; }
+            }
         }
 
         private async void pasteB_Click(object sender, RoutedEventArgs e)
         {
             var dataPackageView = Clipboard.GetContent();
+            if (!dataPackageView.Contains("text")) return;
             string text = await dataPackageView.GetTextAsync();
+
+            if (text == null) return;
 
             TextBlock block = new TextBlock();
             block.TextWrapping = TextWrapping.WrapWholeWords;
             block.Text = text;
 
-            notesLB.Items.Add(block);
+            if (block == null) return;
 
-            if (options[0])
-            {
-                noteTB.Text = "";
-            }
+            notesLB.Items.Add(block);
 
             SaveStuff();
         }
+
+        #endregion
 
         /*
         #region Register for printing
