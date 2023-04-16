@@ -126,6 +126,9 @@
   <data name="Cancel.ToolTipService.ToolTip" xml:space="preserve">
     <value>Cancel (Escape)</value>
   </data>
+  <data name="ChangelogLink.Content" xml:space="preserve">
+    <value>View full changelog</value>
+  </data>
   <data name="Clear.Label" xml:space="preserve">
     <value>Clear All</value>
   </data>

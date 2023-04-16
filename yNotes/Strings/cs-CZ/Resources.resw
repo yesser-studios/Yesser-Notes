@@ -126,6 +126,9 @@
   <data name="Cancel.ToolTipService.ToolTip" xml:space="preserve">
     <value>Zrušit (Escape)</value>
   </data>
+  <data name="ChangelogLink.Content" xml:space="preserve">
+    <value>Zobrazit celý záznam změn</value>
+  </data>
   <data name="Clear.Label" xml:space="preserve">
     <value>Vymazat Vše</value>
   </data>

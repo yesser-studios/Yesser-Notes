@@ -55,7 +55,11 @@
     </Page.TopAppBar>
 
     <Grid>
-        <muxc:TeachingTip x:Uid="WhatsNewTT" x:Name="WhatsNewTT" Title="PLACEHOLDER Whatsnew" Subtitle="PLACEHOLDER Version 0.0.0: CHANGENOTES" CloseButtonContent="Got it!" />
+        <muxc:TeachingTip x:Uid="WhatsNewTT" x:Name="WhatsNewTT" Title="PLACEHOLDER Whatsnew" Subtitle="PLACEHOLDER Version 0.0.0: CHANGENOTES" CloseButtonContent="Got it!">
+            <StackPanel>
+                <HyperlinkButton x:Uid="ChangelogLink" NavigateUri="https://1drv.ms/w/s!Ag98u2Nn2vf2mtVpy7WS0cWKOWYMkg?e=hh2xz8" Content="View Full Changelog" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+        </muxc:TeachingTip>
 
         <ScrollViewer x:Name="mainGrid">
             <StackPanel Orientation="Vertical" x:Name="mainStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
