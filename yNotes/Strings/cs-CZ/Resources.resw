@@ -126,8 +126,17 @@
   <data name="Cancel.ToolTipService.ToolTip" xml:space="preserve">
     <value>Zrušit (Escape)</value>
   </data>
+  <data name="ChangelogDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Zavřít</value>
+  </data>
+  <data name="ChangelogDialog.Title" xml:space="preserve">
+    <value>Záznam změn</value>
+  </data>
   <data name="ChangelogLink.Content" xml:space="preserve">
     <value>Zobrazit celý záznam změn</value>
+  </data>
+  <data name="ChangelogLinkABB.Label" xml:space="preserve">
+    <value>Zobrazit celý Záznam Změn</value>
   </data>
   <data name="Clear.Label" xml:space="preserve">
     <value>Vymazat Vše</value>
@@ -166,6 +175,39 @@ Chcete pokračovat?</value>
   </data>
   <data name="ExportDialog.Title" xml:space="preserve">
     <value>Export</value>
+  </data>
+  <data name="FullChangelogBlock.Text" xml:space="preserve">
+    <value>Verze 1.2.1:
+Změnili jsme styl změn k trochu čitelnější podobě. Když vkládáte prázdnou poznámku tlačítkem Vložit, aplikace již nespadne. Do okna "Co je nového" píšeme jen poslední verzi. Přidali jsme do něj tlačítko pro zobrazení celých poznámek změn od verze 1.1.0 v Angličtině.
+
+Verze 1.2.0:
+O Aplikace byla přejmenována na Yesser Notes, protože už existují jiné aplikace se jménem yNotes od jiných vývojářů.
+O Změněna podmínka pro ukázání dialogu "Co je nového" - programátoři teď nemusí upravovat ID verze.
++ Přidáno kopírování, vyjímání a vkládání poznámek do/ze schránky. (Pouze samotný text je zkopírován, můžete ho vložit do jiných aplikací)
+O Přidána mřížka, ve které jsou umístěny tlačítka Zkopírovat, Vyjmout, Vložit a Smazat.
+O Ostatní tlačítka byla zvětšena, aby bylo místo na mřížku. (Toto se netýká tlačítek v režimu Upravovat)
+
+Verze 1.1.5:
+- Opravena chyba kde vůbec nefunguje úprava poznámek.
+
+Verze 1.1.4:
++ Přidán indikátor verze do nastavení
+
+Verze 1.1.3:
++ Přidán e-mail pro nahlášení chyby nebo návrh funkce aplikace.
+
+Verze 1.1.2:
+O Textové pole zarovnáno na střed
+
+Verze 1.1.1:
++ Přidán indikátor limitu délky poznámek
++ Přidáno zalamování textu poznámek podle slov
+
+Verze 1.1.0:
++ Přidán import poznámek z textového souboru.
++ Přidána podpora pro Xbox (Poznámky nejsou uloženy v Cloudu)
++ Přidána podpora pro systémy x86
++ Přidáno vyskakovací okno "Co je nového"</value>
   </data>
   <data name="Import.Label" xml:space="preserve">
     <value>Importovat</value>

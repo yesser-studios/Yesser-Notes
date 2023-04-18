@@ -10,6 +10,7 @@ using Windows.System.Profile;
 using Windows.UI;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
+using yNotes.Dialogs;
 
 // Dokumentaci k šabloně položky Prázdná stránka najdete na adrese https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x405
 
@@ -400,6 +401,12 @@ namespace yNotes
             notesLB.Items.Add(block);
 
             SaveStuff();
+        }
+
+        private async void FullChangelogB_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new ChangelogDialog();
+            await dialog.ShowAsync();
         }
 
         #endregion
