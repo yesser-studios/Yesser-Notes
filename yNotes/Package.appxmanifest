@@ -19,7 +19,7 @@
   <Properties>
     <DisplayName>Yesser Notes</DisplayName>
     <PublisherDisplayName>Yesser Studios</PublisherDisplayName>
-    <Logo>Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\StoreLogo.png</Logo>
+    <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -36,13 +36,19 @@
       EntryPoint="YesserNotes.App">
       <uap:VisualElements
         DisplayName="Yesser Notes"
-        Square150x150Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Square150x150Logo.png"
-        Square44x44Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Square44x44Logo.png"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Yesser Notes is a notes app developed with easy usage in mind."
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\Wide310x150Logo.png" Square71x71Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\SmallTile.png" Square310x310Logo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\LargeTile.png"/>
-        <uap:SplashScreen Image="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\SplashScreen.png" />
-        <uap:LockScreen BadgeLogo="Mac\Home\Documents\Programování Offline\yNotes\yNotes\Assets\BadgeLogo.png" Notification="badgeAndTileText"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badgeAndTileText"/>
       </uap:VisualElements>
     </Application>
   </Applications>
