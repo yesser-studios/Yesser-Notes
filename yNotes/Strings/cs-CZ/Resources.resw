@@ -178,7 +178,7 @@ Chcete pokračovat?</value>
   </data>
   <data name="FullChangelogBlock.Text" xml:space="preserve">
     <value>Verze 1.2.1:
-Změnili jsme styl změn k trochu čitelnější podobě. Když vkládáte prázdnou poznámku tlačítkem Vložit, aplikace již nespadne. Do okna "Co je nového" píšeme jen poslední verzi. Přidali jsme do něj tlačítko pro zobrazení celých poznámek změn od verze 1.1.0 v Angličtině.
+Změnili jsme styl změn k trochu čitelnější podobě. Když vkládáte prázdnou poznámku tlačítkem Vložit, aplikace již nespadne. Do okna "Co je nového" píšeme jen poslední verzi. Přidali jsme do něj tlačítko pro zobrazení celých poznámek změn od verze 1.1.0.
 
 Verze 1.2.0:
 O Aplikace byla přejmenována na Yesser Notes, protože už existují jiné aplikace se jménem yNotes od jiných vývojářů.
@@ -277,7 +277,7 @@ Verze 1.1.0:
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
     <value>Verze 1.2.1:
-Změnili jsme styl změn k trochu čitelnější podobě. Když vkládáte prázdnou poznámku tlačítkem Vložit, aplikace již nespadne. Do okna "Co je nového" píšeme jen poslední verzi. Přidali jsme do něj tlačítko pro zobrazení celých poznámek změn od verze 1.1.0 v Angličtině.</value>
+Změnili jsme styl změn k trochu čitelnější podobě. Když vkládáte prázdnou poznámku tlačítkem Vložit, aplikace již nespadne. Do okna "Co je nového" píšeme jen poslední verzi. Přidali jsme do něj tlačítko pro zobrazení celých poznámek změn od verze 1.1.0.</value>
   </data>
   <data name="WhatsNewTT.Title" xml:space="preserve">
     <value>Co je nového</value>
