@@ -127,7 +127,7 @@
     <value>Zrušit (Escape)</value>
   </data>
   <data name="ChangelogLink.Content" xml:space="preserve">
-    <value>Zobrazit celý záznam změn (v Angličtině)</value>
+    <value>Zobrazit celý záznam změn</value>
   </data>
   <data name="Clear.Label" xml:space="preserve">
     <value>Vymazat Vše</value>
@@ -187,9 +187,6 @@ Chcete pokračovat?</value>
   </data>
   <data name="NoSelectedFile.Text" xml:space="preserve">
     <value>Není vybraný soubor!</value>
-  </data>
-  <data name="Notify.ToolTipService.ToolTip" xml:space="preserve">
-    <value>Přidat Oznámení</value>
   </data>
   <data name="OK.ToolTipService.ToolTip" xml:space="preserve">
     <value>OK (Enter)</value>
