@@ -133,6 +133,9 @@
     <Compile Include="Dialogs\ChangelogDialog.xaml.cs">
       <DependentUpon>ChangelogDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\DeleteAllDialog.xaml.cs">
+      <DependentUpon>DeleteAllDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\ImportDialog.xaml.cs">
       <DependentUpon>ImportDialog.xaml</DependentUpon>
     </Compile>
@@ -218,6 +221,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Dialogs\ChangelogDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\DeleteAllDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
