@@ -161,6 +161,18 @@ Do you want to continue?</value>
   <data name="Delete.ToolTipService.ToolTip" xml:space="preserve">
     <value>Remove Selected (Delete)</value>
   </data>
+  <data name="DeleteAllDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="DeleteAllDialog.SecondaryButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DeleteAllDialog.Title" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="DeleteAllMessage.Text" xml:space="preserve">
+    <value>Are you sure you want to clear all of your notes? This action is irreversible.</value>
+  </data>
   <data name="Edit.ToolTipService.ToolTip" xml:space="preserve">
     <value>Edit Selected (Ctrl + E)</value>
   </data>

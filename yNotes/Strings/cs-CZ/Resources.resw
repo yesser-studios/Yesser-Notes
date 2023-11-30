@@ -161,6 +161,18 @@ Chcete pokračovat?</value>
   <data name="Delete.ToolTipService.ToolTip" xml:space="preserve">
     <value>Smazat vybrané (Delete)</value>
   </data>
+  <data name="DeleteAllDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Vymazat Vše</value>
+  </data>
+  <data name="DeleteAllDialog.SecondaryButtonText" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="DeleteAllDialog.Title" xml:space="preserve">
+    <value>Vymazat Vše</value>
+  </data>
+  <data name="DeleteAllMessage.Text" xml:space="preserve">
+    <value>Jste si jisti, že chcete vymazat všechny poznámky? Tato akce je nevratná.</value>
+  </data>
   <data name="Edit.ToolTipService.ToolTip" xml:space="preserve">
     <value>Upravit vybranou (Ctrl + E)</value>
   </data>
