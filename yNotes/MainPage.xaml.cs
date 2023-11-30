@@ -226,14 +226,18 @@ namespace yNotes
             _ = dialog.ShowAsync();
         }
 
-        private void ClearAllABB_Click(object sender, RoutedEventArgs e)
+        private async void ClearAllABB_Click(object sender, RoutedEventArgs e)
         {
-            ClearFO.Hide();
+            DeleteAllDialog dialog = new DeleteAllDialog();
+            dialog.DeleteAllEvent += (object s, EventArgs args) =>
+            {
+                noteTB.Focus(FocusState.Keyboard);
 
-            noteTB.Focus(FocusState.Keyboard);
+                notesLB.Items.Clear();
+                SaveStuff();
+            };
 
-            notesLB.Items.Clear();
-            SaveStuff();
+            await dialog.ShowAsync();
         }
 
         #region Edit

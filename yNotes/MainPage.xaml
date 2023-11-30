@@ -39,17 +39,8 @@
                     </AppBarButton.KeyboardAccelerators>
                 </AppBarButton>
                 -->
-                
-                <AppBarButton x:Uid="Clear" x:Name="ClearAllABB" Icon="Delete" Label="Clear All">
-                    <Button.Flyout>
-                        <Flyout x:Name="ClearFO">
-                            <StackPanel>
-                                <TextBlock x:Uid="ClearFlyoutText" Style="{ThemeResource BaseTextBlockStyle}" Text="All notes will be removed. Continue?" TextWrapping="WrapWholeWords" Margin="0,0,0,12" />
-                                <Button x:Uid="ClearOK" Click="ClearAllABB_Click" Content="Yes, clear all" />
-                            </StackPanel>
-                        </Flyout>
-                    </Button.Flyout>
-                </AppBarButton>
+
+                <AppBarButton x:Uid="Clear" x:Name="ClearAllABB" Icon="Delete" Label="Clear All" Click="ClearAllABB_Click" />
 
                 <AppBarButton x:Uid="ChangelogLinkABB" x:Name="ViewFullChangelogABB" Icon="Document" Label="View Full Changelog" Click="FullChangelogB_Click" />
             </CommandBar.SecondaryCommands>

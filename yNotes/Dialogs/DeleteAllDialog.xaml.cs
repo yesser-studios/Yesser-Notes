@@ -19,6 +19,9 @@ namespace yNotes.Dialogs
 {
     public sealed partial class DeleteAllDialog : ContentDialog
     {
+        public delegate void DeleteAllEventHandler(object sender, EventArgs args);
+        public event DeleteAllEventHandler DeleteAllEvent;
+
         public DeleteAllDialog()
         {
             this.InitializeComponent();
@@ -26,10 +29,7 @@ namespace yNotes.Dialogs
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-        }
-
-        private void ContentDialog_SecondaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
+            DeleteAllEvent.Invoke(this, EventArgs.Empty);
         }
     }
 }
