@@ -189,7 +189,10 @@ Do you want to continue?</value>
     <value>Export</value>
   </data>
   <data name="FullChangelogBlock.Text" xml:space="preserve">
-    <value>Version 1.2.1:
+    <value>Version 1.3.0:
+The delete all option is now a dialog box.
+
+Version 1.2.1:
 We changed the format of changes to a more readable format. When pasting an empty note from the clipboard, the application won’t crash anymore. We added a View full changelog button at the end of the “What’s new” popup and added only the last version’s changes there.
 
 Version 1.2.0:
@@ -288,8 +291,8 @@ Version 1.1.0:
     <value>Got it!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Version 1.2.1:
-We changed the format of changes to a more readable format. When pasting an empty note from the clipboard, the application won’t crash anymore. We added a View full changelog button at the end of the “What’s new” popup because starting with this update we only write the last version’s changes in the popup.</value>
+    <value>Version 1.3.0:
+The delete all option is now a dialog box.</value>
   </data>
   <data name="WhatsNewTT.Title" xml:space="preserve">
     <value>What's new</value>
