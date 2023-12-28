@@ -322,6 +322,8 @@ namespace yNotes
             _ = noteLengthPR.Width;
         }
 
+        #region Keyboard Controls
+
         private async void Page_KeyUp(object sender, KeyRoutedEventArgs e)
         {
             if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox")
@@ -377,6 +379,8 @@ namespace yNotes
 
             e.Handled = true;
         }
+
+        #endregion
 
         /* Notification
         private void NotificationB_Click(object sender, RoutedEventArgs e)

@@ -10,7 +10,8 @@
     x:Uid="SettingsDialog"
     PrimaryButtonText="OK"
     PrimaryButtonStyle="{StaticResource AccentButtonStyle}"
-    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    KeyUp="ContentDialog_KeyUp">
 
     <ContentDialog.Resources>
         <!--#region Brushes-->

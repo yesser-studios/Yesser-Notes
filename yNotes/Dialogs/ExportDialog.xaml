@@ -12,7 +12,8 @@
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
     PrimaryButtonStyle="{StaticResource AccentButtonStyle}"
     SecondaryButtonStyle="{StaticResource DefaultButtonStyle}"
-    x:Uid="ExportDialog">
+    x:Uid="ExportDialog"
+    KeyUp="ContentDialog_KeyUp">
 
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20, 0, 0, 0">

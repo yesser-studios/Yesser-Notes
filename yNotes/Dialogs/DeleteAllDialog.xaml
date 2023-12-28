@@ -12,7 +12,8 @@
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
     PrimaryButtonStyle="{StaticResource AccentButtonStyle}"
     SecondaryButtonStyle="{StaticResource DefaultButtonStyle}"
-    x:Uid="DeleteAllDialog">
+    x:Uid="DeleteAllDialog"
+    KeyUp="ContentDialog_KeyUp">
 
     <Grid>
         <TextBlock x:Uid="DeleteAllMessage">Are you sure you'd like to delete all notes?</TextBlock>

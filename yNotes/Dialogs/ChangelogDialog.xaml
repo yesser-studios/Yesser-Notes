@@ -9,7 +9,8 @@
     mc:Ignorable="d"
     Title="Changelog"
     PrimaryButtonText="Close"
-    PrimaryButtonStyle="{StaticResource AccentButtonStyle}">
+    PrimaryButtonStyle="{StaticResource AccentButtonStyle}"
+    KeyUp="ContentDialog_KeyUp">
 
     <ScrollViewer IsTabStop="True">
         <StackPanel>
