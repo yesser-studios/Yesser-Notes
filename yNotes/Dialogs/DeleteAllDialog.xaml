@@ -11,6 +11,7 @@
     SecondaryButtonText="Cancel"
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
     PrimaryButtonStyle="{StaticResource AccentButtonStyle}"
+    SecondaryButtonStyle="{StaticResource DefaultButtonStyle}"
     x:Uid="DeleteAllDialog">
 
     <Grid>
