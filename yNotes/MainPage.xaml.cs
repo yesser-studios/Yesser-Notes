@@ -411,8 +411,12 @@ namespace yNotes
         */
 
         #region Copy, Cut and Paste
+
         private void copyB_Click(object sender, RoutedEventArgs e)
         {
+            if (FocusManager.GetFocusedElement() == noteTB)
+                return;
+
             object selectedRaw = notesLB.SelectedItem;
             selectedBlock = selectedRaw as TextBlock;
 
@@ -431,6 +435,9 @@ namespace yNotes
 
         private void cutB_Click(object sender, RoutedEventArgs e)
         {
+            if (FocusManager.GetFocusedElement() == noteTB)
+                return;
+
             object selectedRaw = notesLB.SelectedItem;
             selectedBlock = selectedRaw as TextBlock;
 
@@ -450,6 +457,9 @@ namespace yNotes
 
         private async void pasteB_Click(object sender, RoutedEventArgs e)
         {
+            if (FocusManager.GetFocusedElement() == noteTB)
+                return;
+
             var dataPackageView = Clipboard.GetContent();
             if (!dataPackageView.Contains("text")) return;
             string text = await dataPackageView.GetTextAsync();
@@ -467,13 +477,13 @@ namespace yNotes
             SaveStuff();
         }
 
+        #endregion
+
         private async void FullChangelogB_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new ChangelogDialog();
             await dialog.ShowAsync();
         }
-
-        #endregion
 
         /*
         #region Register for printing
