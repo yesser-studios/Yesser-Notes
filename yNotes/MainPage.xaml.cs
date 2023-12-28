@@ -324,7 +324,7 @@ namespace yNotes
 
         private async void Page_KeyUp(object sender, KeyRoutedEventArgs e)
         {
-            if (e.KeyStatus.RepeatCount != 1)
+            if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox")
             {
                 e.Handled = true;
                 return;
@@ -360,6 +360,12 @@ namespace yNotes
 
         private async void mainCB_KeyUp(object sender, KeyRoutedEventArgs e)
         {
+            if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox")
+            {
+                e.Handled = true;
+                return;
+            }
+
             if (e.Key == Windows.System.VirtualKey.Down)
             {
                 await FocusManager.TryFocusAsync(noteTB, FocusState.Keyboard);
