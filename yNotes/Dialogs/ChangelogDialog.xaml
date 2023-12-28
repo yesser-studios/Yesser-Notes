@@ -11,7 +11,7 @@
     PrimaryButtonText="Close"
     PrimaryButtonStyle="{StaticResource AccentButtonStyle}">
 
-    <ScrollViewer>
+    <ScrollViewer IsTabStop="True">
         <StackPanel>
             <TextBlock x:Uid="FullChangelogBlock" Text="Changelog PLACEHOLDER" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" />
         </StackPanel>
