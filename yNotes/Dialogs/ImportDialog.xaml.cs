@@ -73,7 +73,7 @@ namespace yNotes
 
         private void ContentDialog_KeyUp(object sender, KeyRoutedEventArgs e)
         {
-            if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox")
+            if (MainPage.gamepadKeys.Contains(e.OriginalKey))
             {
                 e.Handled = true;
                 return;

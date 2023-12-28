@@ -12,6 +12,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
 using yNotes.Dialogs;
 using Windows.UI.Xaml.Input;
+using Windows.System;
 
 // Dokumentaci k šabloně položky Prázdná stránka najdete na adrese https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x405
 
@@ -33,6 +34,40 @@ namespace yNotes
         {
             true,
             false
+        };
+
+        public static readonly VirtualKey[] gamepadKeys =
+        {
+            VirtualKey.GamepadA,
+            VirtualKey.GamepadB,
+            VirtualKey.GamepadX,
+            VirtualKey.GamepadY,
+
+            VirtualKey.GamepadDPadDown,
+            VirtualKey.GamepadDPadLeft,
+            VirtualKey.GamepadDPadUp,
+            VirtualKey.GamepadDPadRight,
+
+            VirtualKey.GamepadLeftShoulder,
+            VirtualKey.GamepadRightShoulder,
+
+            VirtualKey.GamepadLeftThumbstickButton,
+            VirtualKey.GamepadRightThumbstickButton,
+
+            VirtualKey.GamepadLeftThumbstickDown,
+            VirtualKey.GamepadLeftThumbstickUp,
+            VirtualKey.GamepadLeftThumbstickLeft,
+            VirtualKey.GamepadLeftThumbstickRight,
+            VirtualKey.GamepadRightThumbstickDown,
+            VirtualKey.GamepadRightThumbstickUp,
+            VirtualKey.GamepadRightThumbstickLeft,
+            VirtualKey.GamepadRightThumbstickRight,
+
+            VirtualKey.GamepadLeftTrigger,
+            VirtualKey.GamepadRightTrigger,
+
+            VirtualKey.GamepadMenu,
+            VirtualKey.GamepadView,
         };
 
         /// <summary>
@@ -326,7 +361,7 @@ namespace yNotes
 
         private async void Page_KeyUp(object sender, KeyRoutedEventArgs e)
         {
-            if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox")
+            if (gamepadKeys.Contains(e.OriginalKey))
             {
                 e.Handled = true;
                 return;
@@ -362,15 +397,18 @@ namespace yNotes
 
         private async void mainCB_KeyUp(object sender, KeyRoutedEventArgs e)
         {
-            if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox")
+            if (gamepadKeys.Contains(e.OriginalKey))
             {
                 e.Handled = true;
                 return;
             }
 
+            var selected = FocusManager.GetFocusedElement();
+
             if (e.Key == Windows.System.VirtualKey.Down)
             {
-                await FocusManager.TryFocusAsync(noteTB, FocusState.Keyboard);
+                if (selected != ClearAllABB && selected != ViewFullChangelogABB)
+                    await FocusManager.TryFocusAsync(notesLB, FocusState.Keyboard);
             }
             else if (e.Key == Windows.System.VirtualKey.Up)
             {

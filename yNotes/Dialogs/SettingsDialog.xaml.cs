@@ -1,4 +1,5 @@
-﻿using Windows.ApplicationModel;
+﻿using System.Linq;
+using Windows.ApplicationModel;
 using Windows.System.Profile;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -67,7 +68,7 @@ namespace yNotes
 
         private void ContentDialog_KeyUp(object sender, KeyRoutedEventArgs e)
         {
-            if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox")
+            if (MainPage.gamepadKeys.Contains(e.OriginalKey))
             {
                 e.Handled = true;
                 return;
