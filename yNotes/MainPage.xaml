@@ -7,10 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls">
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    KeyUp="Page_KeyUp">
 
     <Page.TopAppBar>
-        <CommandBar DefaultLabelPosition="Right" x:Name="mainCB">
+        <CommandBar DefaultLabelPosition="Right" x:Name="mainCB" KeyUp="mainCB_KeyUp">
             <CommandBar.PrimaryCommands>
                 <AppBarButton x:Uid="Settings" x:Name="SettingsABB" Icon="Setting" Label="Settings" Click="SettingsABB_Click">
                     <AppBarButton.KeyboardAccelerators>

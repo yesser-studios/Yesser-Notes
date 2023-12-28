@@ -11,6 +11,7 @@ using Windows.UI;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
 using yNotes.Dialogs;
+using Windows.UI.Xaml.Input;
 
 // Dokumentaci k šabloně položky Prázdná stránka najdete na adrese https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x405
 
@@ -306,6 +307,9 @@ namespace yNotes
                 ExportABB.Visibility = Visibility.Collapsed;
                 ImportABB.Visibility = Visibility.Collapsed;
             }
+
+            // Disable overscan
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.UseCoreWindow);
         }
 
         private void noteTB_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -316,6 +320,56 @@ namespace yNotes
             noteLengthPR.Foreground = value == 100 ? redPRColor : defaultPRColor;
 
             _ = noteLengthPR.Width;
+        }
+
+        private async void Page_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.KeyStatus.RepeatCount != 1)
+            {
+                e.Handled = true;
+                return;
+            }
+
+            if (e.Key == Windows.System.VirtualKey.Up)
+            {
+                // Mimic Shift+Tab when user hits up arrow key.
+                bool focused = FocusManager.TryMoveFocus(FocusNavigationDirection.Up);
+                if (!focused)
+                    await FocusManager.TryFocusAsync(ImportABB, FocusState.Keyboard);
+            }
+            else if (e.Key == Windows.System.VirtualKey.Down)
+            {
+                // Mimic Tab when user hits down arrow key.
+                bool focused = FocusManager.TryMoveFocus(FocusNavigationDirection.Down);
+                if (!focused)
+                    await FocusManager.TryFocusAsync(ImportABB, FocusState.Keyboard);
+            }
+            else if (e.Key == Windows.System.VirtualKey.Left)
+            {
+                // Mimic Tab when user hits down arrow key.
+                FocusManager.TryMoveFocus(FocusNavigationDirection.Left);
+            }
+            else if (e.Key == Windows.System.VirtualKey.Right)
+            {
+                // Mimic Tab when user hits down arrow key.
+                FocusManager.TryMoveFocus(FocusNavigationDirection.Right);
+            }
+
+            e.Handled = true;
+        }
+
+        private async void mainCB_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Down)
+            {
+                await FocusManager.TryFocusAsync(noteTB, FocusState.Keyboard);
+            }
+            else if (e.Key == Windows.System.VirtualKey.Up)
+            {
+                await FocusManager.TryFocusAsync(deleteB, FocusState.Keyboard);
+            }
+
+            e.Handled = true;
         }
 
         /* Notification
