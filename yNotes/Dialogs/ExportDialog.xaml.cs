@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -68,7 +68,6 @@ namespace yNotes
             {
                 dialog = new MessageDialog("File could not save. Check if the folder or file is editable by you!", "Error While Saving File");
             }
-            
         }
 
         private void UpdateContent()

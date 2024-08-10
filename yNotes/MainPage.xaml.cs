@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -230,7 +230,7 @@ namespace yNotes
             PackageId packageId = package.Id;
             version = packageId.Version;
 
-            updateID = version.Major * 1000000 + version.Minor * 1000 + version.Build;
+            updateID = (version.Major * 1000000) + (version.Minor * 1000) + version.Build;
         }
 
         private void ShowWhatsNewPopup()
@@ -294,7 +294,6 @@ namespace yNotes
             {
                 editNoNoteSelectedTT.IsOpen = true;
             }
-
         }
 
         private void editSaveB_Click(object sender, RoutedEventArgs e)
