@@ -1,6 +1,10 @@
 # Yesser Notes (formerly yNotes)
 The lightweight notes app for your short note-taking needs, made by Yesser Studios.
 
+<a href="https://apps.microsoft.com/detail/9nn3t9pxq9t7?mode=direct">
+	<img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/>
+</a>
+
 This is the official repository for Yesser Notes.
 
 ## Description
