@@ -155,6 +155,12 @@ Do you want to continue?</value>
   <data name="Copy.ToolTipService.ToolTip" xml:space="preserve">
     <value>Copy to Clipboard (Ctrl + C)</value>
   </data>
+  <data name="CursorModeTB.OnContent" xml:space="preserve">
+    <value>Enable Cursor Mode</value>
+  </data>
+  <data name="CursorModeTB.OffContent" xml:space="preserve">
+    <value>Enable Cursor Mode</value>
+  </data>
   <data name="Cut.ToolTipService.ToolTip" xml:space="preserve">
     <value>Cut (Ctrl + X)</value>
   </data>
@@ -189,7 +195,10 @@ Do you want to continue?</value>
     <value>Export</value>
   </data>
   <data name="FullChangelogBlock.Text" xml:space="preserve">
-    <value>Version 1.4.0:
+    <value>Version 1.5.0:
+Added a setting that will enable cursor mode on Xbox. Enable it if you have issues with controlling the app.
+
+Version 1.4.0:
 Added keyboard controls and gamepad controls. Removed the Xbox overscan (the weird spacing around the app content on Xbox).
 
 Version 1.3.0:
@@ -294,10 +303,13 @@ Version 1.1.0:
     <value>Got it!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Version 1.4.0:
-Added keyboard controls and gamepad controls. Removed the Xbox overscan (the weird spacing around the app content on Xbox).</value>
+    <value>Version 1.5.0:
+Added a setting that will enable cursor mode on Xbox. Enable it if you have issues with controlling the app.</value>
   </data>
   <data name="WhatsNewTT.Title" xml:space="preserve">
     <value>What's new</value>
+  </data>
+  <data name="ChangesRestartTB.Text" xml:space="preserve">
+    <value>Some changes need a restart to apply.</value>
   </data>
 </root>

@@ -155,6 +155,12 @@ Chcete pokračovat?</value>
   <data name="Copy.ToolTipService.ToolTip" xml:space="preserve">
     <value>Zkopírovat do Schránky (Ctrl + C)</value>
   </data>
+  <data name="CursorModeTB.OnContent" xml:space="preserve">
+    <value>Zapnout režim kurzoru</value>
+  </data>
+  <data name="CursorModeTB.OffContent" xml:space="preserve">
+    <value>Zapnout režim kurzoru</value>
+  </data>
   <data name="Cut.ToolTipService.ToolTip" xml:space="preserve">
     <value>Vyjmout (Ctrl + X)</value>
   </data>
@@ -189,7 +195,10 @@ Chcete pokračovat?</value>
     <value>Export</value>
   </data>
   <data name="FullChangelogBlock.Text" xml:space="preserve">
-    <value>Verze 1.4.0:
+    <value>Verze 1.5.0:
+Přidali jsme nastavení, které na Xboxu zapíná režim kurzoru. Zapněte jej, pokud máte potíže s ovládáním aplikace.
+
+Verze 1.4.0:
 Přidali jsme ovládání klávesnicí a gamepadem. Aplikace nyní pokrývá celou obrazovku na konzolích Xbox.
 
 Verze 1.3.0:
@@ -294,10 +303,13 @@ Verze 1.1.0:
     <value>Mám to!</value>
   </data>
   <data name="WhatsNewTT.Subtitle" xml:space="preserve">
-    <value>Verze 1.4.0:
-Přidali jsme ovládání klávesnicí a gamepadem. Aplikace nyní pokrývá celou obrazovku na konzolích Xbox.</value>
+    <value>Verze 1.5.0:
+Přidali jsme nastavení, které na Xboxu zapíná režim kurzoru. Zapněte jej, pokud máte potíže s ovládáním aplikace.</value>
   </data>
   <data name="WhatsNewTT.Title" xml:space="preserve">
     <value>Co je nového</value>
+  </data>
+  <data name="ChangesRestartTB.Text" xml:space="preserve">
+    <value>Některé změny vyžadují restart, aby se použily.</value>
   </data>
 </root>
