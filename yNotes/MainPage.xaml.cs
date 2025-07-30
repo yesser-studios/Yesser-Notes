@@ -33,6 +33,7 @@ namespace yNotes
         public bool[] options =
         {
             true,
+            false,
             false
         };
 
@@ -138,8 +139,7 @@ namespace yNotes
             {
                 notesLB.Items.Remove(item);
             }
-
-
+            
             SaveStuff();
         }
 
