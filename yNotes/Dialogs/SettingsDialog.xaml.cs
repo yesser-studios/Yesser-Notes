@@ -14,6 +14,7 @@ namespace yNotes
         bool[] options =
         {
             true,
+            false,
             false
         };
 
@@ -34,7 +35,11 @@ namespace yNotes
             main = mainPage;
 
             SaveDStateSaving.IsOn = options[0];
+            CursorMode.IsOn = options[2];
 
+            if (AnalyticsInfo.VersionInfo.DeviceFamily != "Windows.Xbox")
+                CursorMode.Visibility = Visibility.Collapsed;
+            
             version = GetAppVersion();
             VersionL.Text += version;
         }
@@ -99,5 +104,11 @@ namespace yNotes
         }
 
         #endregion
+
+        private void CursorMode_OnToggled(object sender, RoutedEventArgs e)
+        {
+            options[2] = CursorMode.IsOn;
+            ChangesRestart.Visibility = Visibility.Visible;
+        }
     }
 }

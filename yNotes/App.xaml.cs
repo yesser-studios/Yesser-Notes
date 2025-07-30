@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace yNotes
@@ -22,15 +13,33 @@ namespace yNotes
     /// </summary>
     sealed partial class App : Application
     {
+        readonly ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+        
         /// <summary>
         /// Inicializuje objekt aplikace typu singleton. Jedná se o první řádek spuštěného vytvořeného kódu,
         /// který je proto logickým ekvivalentem metod main() nebo WinMain().
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
-            this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
-            this.Suspending += OnSuspending;
+            InitializeComponent();
+            
+            SetPointerMode();
+            Suspending += OnSuspending;
+        }
+
+        private void SetPointerMode()
+        {
+            RequiresPointerMode = ApplicationRequiresPointerMode.WhenRequested;
+            
+            object optionsRaw = localSettings.Values["options"];
+            if (optionsRaw == null) return;
+
+            bool[] optionsArray = optionsRaw as bool[];
+            if (optionsArray == null || optionsArray.Length < 3) return;
+            
+            RequiresPointerMode = optionsArray[2]
+                ? ApplicationRequiresPointerMode.Auto
+                : ApplicationRequiresPointerMode.WhenRequested;
         }
 
         /// <summary>
